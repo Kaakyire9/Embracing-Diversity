@@ -1,0 +1,427 @@
+/* Google Fonts */
+/* Heading fonts - Montserrat or Poppins */
+/* Body fonts - Open Sans or Roboto Slab */
+/* Button/CTA - open sans or Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-font: 'Open Sans', sans-serif; /* Primary font */
+    --secondary-font: 'roboto slab', montserrat; /* Secondary font */
+    --primary-color: #095B5B; /* Primary color */
+    --secondary-color: #aa9581; /* Secondary color */
+    --highlight-color: #416a8e; /* Highlight color */
+    --light-hightlight-color: #7a9fc2; /* Light highlight color */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+}
+
+.hero-section {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font); /* Use the secondary font for headings */
+    color: var(--primary-color); /* Primary color for headings */
+}
+
+.subheading {
+    color: var(--highlight-color); /* Highlight color for subheadings */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/div-inclu-hero-1.webp') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn {
+        font-size: 1rem;
+    }
+}
+
+/* Global Styles */
+body {
+    font-family: var(--primary-font); /* Use the primary font */
+    position: relative;
+     color:  #001F3F (Navy); /* Primary text color */
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/div-inclu-background.webp'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    opacity: 0.3; /* Adjust the opacity (0.0 to 1.0) */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Example font */
+    position: relative;
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Example font for headers */
+    color: #333; /* Default color for headers */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #B71C1C; /* Example color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color) /* Example color */
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+h4 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #666; /* Example color */
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #999; /* Example color */
+}
+
+h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #bbb; /* Example color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+}
+
+
+/* Nabvar */
+.navbar {
+    background-color: #00796B;
+    padding: 5px 0;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-toggler-icon {
+    color: white !important;
+}
+
+.navbar .btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+.navbar .btn-outline-success:hover {
+    color: #00796B;
+    background-color: white;
+}
+
+
+#logo img {
+    max-height: 50px; /* Adjust based on your navbar height */
+    max-width: 100%; /* Maintain aspect ratio */
+    height: auto; /* Ensure the height adjusts automatically */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    display: block; /* Ensure the image is displayed as a block element */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+#logo img:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}
+.carousel-item {
+    background-color: rgba(250, 244, 244, 0.827); /* Light background color */
+    color: #343a40; /* Dark text color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image-carousel .carousel-item {
+    height: 400px; /* Adjust this value to your desired height */
+}
+
+.image-carousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    border-radius: 0;
+}
+/* Button Styles */
+.btn {
+    border-radius: 0;
+}
+
+/* Button Styles */
+.btn-outline-secondary {
+    color: #ffffff; /* White text color */
+    background-color: #00796B; /* Background color */
+    border: 1px solid #ffffff; /* White border */
+    padding: 10px 10px; /* Increase padding */
+    font-size: 1rem; /* Increase font size */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.btn-outline-secondary:hover {
+    color: #00796B; /* Text color on hover */
+    background-color: #ffffff; /* Background color on hover */
+    border-color: #00796B; /* Border color on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #00796B; /* Background color for carousel controls */
+    border-radius: 50%; /* Make the controls circular */
+    padding: 10px; /* Add padding */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #00796B; /* Text color on hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    min-height: 160px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    color: var(--highlight-color); /* Use your highlight color */
+    font-weight: bold; /* Optional: Make the title bold */
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transform: scale(1.05); /* Slightly scale up the card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+
+.diversity-news h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.news-item {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.news-item p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0066cc;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0052a3;
+}
+
+@media (max-width: 520px) {
+    .row {
+        gap: 20px;
+    }
+}
+
+.custom-card {
+    margin-bottom: 20px; /* Default margin for small screens */
+}
+
+footer {
+    background-color: rgba(72, 61, 139, 0.8); /* Dark Slate Blue */
+}
+
+@media (min-width: 576px) {
+    .custom-card {
+        margin-bottom: 30px; /* Margin for small to medium screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-card {
+        margin-bottom: 40px; /* Margin for medium to large screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-card {
+        margin-bottom: 50px; /* Margin for large screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-card {
+        margin-bottom: 60px; /* Margin for extra large screens */
+    }
+}
+
+:root {
+    --highlight-color: #FF5722; /* Example highlight color */
+    --primary-color: #00796B;
+    --secondary-color: #333;
+}
+
+/* Subheadings */
+.subheading {
+    color: var(--highlight-color);
+}
+
+/* Links */
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-highlight {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+}
+
+.btn-highlight:hover {
+    background-color: darken(var(--highlight-color), 10%);
+}
+
+/* Important Text */
+.important-text {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+/* Borders and Underlines */
+.highlight-border {
+    border: 2px solid var(--highlight-color);
+}
+
+.highlight-underline {
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+/* Icons */
+.icon-highlight {
+    color: var(--highlight-color);
+}
+
+.icon {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+/* Ensure images are responsive */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
